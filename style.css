@@ -1,0 +1,90 @@
+@font-face {
+	font-family: "SilkscreenExp";
+	src: url("font/slkscre-webfont.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "TerminusWeb";
+	src: url("font/TerminusBold700.ttf"); format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+html {
+	background-color: #121111;
+	/* background-image: ; */
+	font-family: Terminus; 
+	font-smooth: never;
+
+}
+
+#terminal {
+	font-size: 20px;
+	font-weight: bold;
+	border: 2px solid #00FF00;
+	height: 700px;
+	width: 1200px;
+	margin: 100px auto 200px;
+	box-sizing: border-box;
+	padding: 10px;
+}
+
+#terminal p {
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+.user {
+	color: #00FF00;
+}
+
+.cmd {
+	color: #FFFFFF;
+	font-weight: normal;	
+}
+
+.arg {
+	color: red;
+}
+
+.link a:link, a:visited, a:hover, a:active {
+	color: #3C005A;
+	text-decoration: none;
+}
+
+.link {
+	margin-right: 10px;
+}
+
+/* final prompt with blinking cursor */
+#prompt span::after {
+	content: "";
+	width: 10px;
+	height: 20px;
+	background: rgb(255,255,255);
+	display: inline-block;
+	animation: cursor-blink 1s infinite;
+	margin-left: 7px;
+}
+
+#prompt span {
+	display: flex;
+	align-items: center;
+	gap: 2px;
+}
+
+@keyframes cursor-blink {
+	0% {
+		opacity: 0;
+	}
+
+	49% {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+	}
+}
