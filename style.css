@@ -1,3 +1,4 @@
+/* Custom font faces. Default 2 are Silkscreen and Terminus */
 @font-face {
 	font-family: "SilkscreenExp";
 	src: url("font/slkscre-webfont.woff") format("woff");
